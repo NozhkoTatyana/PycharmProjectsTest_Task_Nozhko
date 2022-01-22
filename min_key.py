@@ -1,7 +1,8 @@
 def min_value():
     numbers = {
-        "number_1": '10.5',
+        
         "number_2": 20,
+        "number_1": '10.5',
         "number_3": 3.5
     }
     values = [float(val) for val in numbers.values()]
