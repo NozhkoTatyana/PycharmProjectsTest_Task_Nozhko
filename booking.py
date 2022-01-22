@@ -4,7 +4,7 @@ import json
 
 
 def info():
-    read_excel_file = pd.read_excel('booking_Odessa.xlsx')
+    read_excel_file = pd.read_excel('booking_Odessa.xlsx', sheet_name='Sheet1')
     df_excel = pd.DataFrame(read_excel_file)
     col = "Цена"
     price = df_excel[col].str[3:]
@@ -23,12 +23,6 @@ def info():
     del df_excel['Название']
     min_price = df_excel[df_excel['Price'] == df_excel['Price'].min()]
     print(min_price)
-
-
-
-
-
-
 
 
 info()
